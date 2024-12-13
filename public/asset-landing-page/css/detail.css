@@ -1,0 +1,44 @@
+/* Pengaturan umum body untuk membuat tabel di tengah halaman */
+.table-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 1000px;
+}
+
+.table-container {
+    background-color: #fff;
+    padding: 1rem;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.table-container h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.table-container h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.table-container p {
+    font-size: 20px;
+}
+
+.table-container p span {
+    font-weight: 700;
+}
+
+.back-btn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.back-btn button {
+    padding: 1rem 2rem;
+}
