@@ -38,9 +38,10 @@ Route::middleware('auth')->group(function () {
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
-Route::get('welcome#contact', [HomeController::class, 'index'])->name('index#contact');
+Route::get('/#contact', [HomeController::class, 'index'])->name('index#contact');
 
-Route::post('welcome', [HomeController::class, 'store'])->name('index.store');
+Route::post('/', [HomeController::class, 'store'])->name('index.store');
+Route::post('dashboard', [HomeController::class, 'store'])->name('index.store');
 
 Route::get('admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 Route::get('admin/index', [AdminController::class, 'dashboard'])->name('admin.index');

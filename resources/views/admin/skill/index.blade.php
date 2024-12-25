@@ -48,17 +48,6 @@
                                         <td>{{ $row->title }}</td>
                                         <td><img src="{{ asset('storage/' . $row->photo) }}" alt="{{ $row->photo }}">
                                         </td>
-                                        {{-- <td>
-                                            @if ($row->photo)
-                                                <a href="{{ asset('storage/' . $row->photo) }}">
-                                                    <button class="delete-button">
-                                                        <span>View</span>
-                                                    </button>
-                                                </a>
-                                            @else
-                                                <p>Photo not available</p>
-                                            @endif
-                                        </td> --}}
                                         <td>{{ $row->description }}</td>
                                         <td align="center">
                                             <a href="{{ route('skill.show', $row->id) }}">
@@ -71,7 +60,8 @@
                                             </a>
                                         </td>
                                         <td align="center">
-                                            <form action="{{ route('skill.destroy', $row->id) }}" method="POST">
+                                            <form id="delete-form-{{ $row->id }}"
+                                                action="{{ route('skill.destroy', $row->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="button" data-id="{{ $row->id }}"
